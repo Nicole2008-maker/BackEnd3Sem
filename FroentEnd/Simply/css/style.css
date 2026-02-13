@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+
+}
+
+.layout-grid {
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    /*Centraliza o elemento*/
+
+
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    width: 130px;
+}
+
+/*nav*/
+.menu {
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+
+}
+
+.menu a {
+    /*Transformar as letras em maiusculo*/
+    /*Retirar a decoracao do link*/
+    /*Colocar o link na cor preta*/
+    text-transform: uppercase;
+    color: black;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+
+}
+
+/* ********** BANNER ********** */
+
+.banner {
+    /*Apenas para servir de referencial do boatao*/
+    position: relative;
+    top: 0;
+    left: 0;
+    border: 2px solid palevioletred;
+
+}
+
+.banner img {
+    width: 100%;
+
+}
+
+/*botao Get Started*/
+.banner a {
+    /*absolute tem como referencial o primeiro ancestral que tiver
+     um position definido*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 45px;
+    color: white;
+    background-color: black;
+    border-radius: 3px;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+    font-weight: 600;
+}
