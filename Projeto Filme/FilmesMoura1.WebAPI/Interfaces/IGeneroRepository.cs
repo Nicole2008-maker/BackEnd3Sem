@@ -1,0 +1,15 @@
+﻿using FilmesMoura1.WebAPI.Models;
+
+namespace FilmesMoura1.WebAPI.Interfaces
+{
+    public interface IGeneroRepository
+    {
+        Genero BuscarPorId(Guid id);
+        List<Genero> Listar();
+        void Cadastrar(Genero novoGenero);
+        void Deletar(Guid id);
+        void AtualizarIdCorpo(Genero generoAtualizado);
+        void AtualizarUrl(Guid id, Genero generoAtualizado);
+
+    }
+}
