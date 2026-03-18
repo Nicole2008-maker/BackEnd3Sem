@@ -3628,11 +3628,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\55473639879\\Desktop\\Projeto Filme\\FilmesMoura1.WebAPI\\FilmesMoura1.WebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\55473639879\\Desktop\\BackEnd3Sem\\Projeto Filme\\FilmesMoura1.WebAPI\\FilmesMoura1.WebAPI.csproj",
       "projectName": "FilmesMoura1.WebAPI",
-      "projectPath": "C:\\Users\\55473639879\\Desktop\\Projeto Filme\\FilmesMoura1.WebAPI\\FilmesMoura1.WebAPI.csproj",
+      "projectPath": "C:\\Users\\55473639879\\Desktop\\BackEnd3Sem\\Projeto Filme\\FilmesMoura1.WebAPI\\FilmesMoura1.WebAPI.csproj",
       "packagesPath": "C:\\Users\\55473639879\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\55473639879\\Desktop\\Projeto Filme\\FilmesMoura1.WebAPI\\obj\\",
+      "outputPath": "C:\\Users\\55473639879\\Desktop\\BackEnd3Sem\\Projeto Filme\\FilmesMoura1.WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
