@@ -44,17 +44,24 @@ public class PresencaRepository : IPresencaRepository
 
     public void Deletar(Guid id)
     {
-        
+        var PresencaBuscada = _context.Instituicaos.Find(id);
+
+        if (PresencaBuscada != null)
+        {
+            _context.Instituicaos.Remove(PresencaBuscada);
+            _context.SaveChanges();
+        }
     }
 
     public void Inscrever(Presenca presenca)
     {
-        throw new NotImplementedException();
+        _context.Presencas.Add(presenca);
+        _context.SaveChanges();
     }
 
     public List<Presenca> Listar()
     {
-        throw new NotImplementedException();
+        return _context.Presencas.OrderBy(Presenca => Presenca).ToList();
     }
 
     /// <summary>
