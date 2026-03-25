@@ -1,7 +1,8 @@
-﻿
-using EventPlus.WebAPI.BdContextEvent;
+﻿using EventPlus.WebAPI.BdContextEvent;
 using EventPlus.WebAPI.Interface;
+
 using EventPlus.WebAPI.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace EventPlus.WebAPI.Repositories;
 
@@ -13,16 +14,29 @@ public class ComentarioEventoRepository : IComentarioEventoRepository
     {
         _context = context;
     }
+
+
+
+
+    public ComentarioEvento BuscarPorIdUsuario(Guid IdUsuario)
+    {
+        return _context.ComentarioEventos
+            .FirstOrDefault(c => c.IdUsuario == IdUsuario)!;
+    }
+
     public ComentarioEvento BuscarPorIdUsuario(Guid IdUsuario, Guid IdEvento)
     {
         throw new NotImplementedException();
     }
+
+
 
     public void Cadastrar(ComentarioEvento comentarioEvento)
     {
         _context.ComentarioEventos.Add(comentarioEvento);
         _context.SaveChanges();
     }
+
 
     public void Deletar(Guid idComentarioEvento)
     {
@@ -36,13 +50,31 @@ public class ComentarioEventoRepository : IComentarioEventoRepository
         }
     }
 
-    public List<ComentarioEvento> List(Guid IdEvento)
+
+
+    public List<ComentarioEvento> Listar()
     {
         return _context.ComentarioEventos.OrderBy(ComentarioEventos => ComentarioEventos.Descricao).ToList();
     }
 
-    public List<ComentarioEvento> ListarSomenteExibe(Guid IdEvento)
+    public List<ComentarioEvento> Listar(Guid IdEvento)
     {
         throw new NotImplementedException();
     }
+
+
+    public List<ComentarioEvento> ListarSomenteExibe(Guid IdEvento)
+    {
+        return _context.ComentarioEventos
+            .Where(c => c.IdEvento == IdEvento && c.Exibe).ToList();
+    }
+
+    object? IComentarioEventoRepository.BuscarPorIdUsuario(Guid idUsuario)
+    {
+        return BuscarPorIdUsuario(idUsuario);
+    }
+
+
+
+
 }

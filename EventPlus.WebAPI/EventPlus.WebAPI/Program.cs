@@ -18,7 +18,7 @@ builder.Services.AddScoped<IEventoRepository, EventoRepository>();
 builder.Services.AddScoped<IComentarioEventoRepository, ComentarioEventoRepository>();
 
 
-var endpoint = "";
+var endpoint = "https://moderatorservice-marcos.cognitiveservices.azure.com/";
 var apiKey = "";
 
 var client = new ContentSafetyClient(new Uri(endpoint), new Azure.AzureKeyCredential(apiKey));
