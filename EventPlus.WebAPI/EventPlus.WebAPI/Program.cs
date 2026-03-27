@@ -19,7 +19,7 @@ builder.Services.AddScoped<IComentarioEventoRepository, ComentarioEventoReposito
 
 
 var endpoint = "https://moderatorservice-marcos.cognitiveservices.azure.com/";
-var apiKey = "CoT9GwzRY47xItSICYdSEixnK2Qeos4ur5Jjt82hF5LnBHZCleMKJQQJ99CCACYeBjFXJ3w3AAAHACOGXDmR";
+var apiKey = "";
 
 var client = new ContentSafetyClient(new Uri(endpoint), new Azure.AzureKeyCredential(apiKey));
 builder.Services.AddSingleton(client);

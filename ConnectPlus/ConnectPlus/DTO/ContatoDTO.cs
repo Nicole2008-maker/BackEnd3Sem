@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Conventions;
+﻿
+using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 
 namespace ConnectPlus.DTO;
 

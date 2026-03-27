@@ -19,9 +19,7 @@ public partial class Contato
     [Unicode(false)]
     public string FormaDeContato { get; set; } = null!;
 
-    [StringLength(250)]
-    [Unicode(false)]
-    public string Identificador { get; set; } = null!;
+ 
 
     [StringLength(400)]
     public string? Imagem { get; set; }

@@ -19,3 +19,6 @@ Imagem           NVARCHAR (400)            ,
 IdTipoUsuario    UNIQUEIDENTIFIER  FOREIGN KEY REFERENCES TipoContato(IdTipoContato),
 );
 
+ALTER TABLE Contato
+DROP COLUMN Identificador
+

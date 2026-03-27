@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using ConnectPlus.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace ConnectPlus.BdContextEvent;
+namespace ConnectPlus.BdContextConnect;
 
-public partial class EventContext : DbContext
+public partial class ConnecContext : DbContext
 {
-    public EventContext()
+    public ConnecContext()
     {
     }
 
-    public EventContext(DbContextOptions<EventContext> options)
+    public ConnecContext(DbContextOptions<ConnecContext> options)
         : base(options)
     {
     }
